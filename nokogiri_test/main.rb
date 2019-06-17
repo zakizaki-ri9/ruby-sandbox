@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
-require 'byebug'
 
+# index.htmlを読み込み
 html = open('./index.html', &:read)
 
 doc = Nokogiri::HTML.parse(html, nil)
