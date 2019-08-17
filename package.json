@@ -1,12 +1,13 @@
 {
-  "dependencies": {
-    "husky": "^3.0.3",
-    "lint-staged": "^9.2.1"
-  },
+  "dependencies": {},
   "scripts": {
     "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{rb}|Gemfile": "bundle exec rubocop --safe-auto-correct --force-exclusion"
+  },
+  "devDependencies": {
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1"
   }
 }
