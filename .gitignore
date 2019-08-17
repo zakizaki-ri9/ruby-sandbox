@@ -50,3 +50,4 @@ build-iPhoneSimulator/
 
 # UserSettings
 **/.byebug_history
+**/node_modules

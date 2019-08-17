@@ -3,7 +3,7 @@
 require 'nokogiri'
 
 # index.htmlを読み込み
-html = open('./index.html', &:read)
+html = open('nokogiri_test/index.html', &:read)
 
 doc = Nokogiri::HTML.parse(html, nil)
 doc.search('input').each do |element|
