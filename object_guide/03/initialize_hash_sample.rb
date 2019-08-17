@@ -12,6 +12,8 @@ module InitializePattern
   # Bad
   class Bad < Base
     def initialize(args)
+      # `a || b`で比較した場合、aがnil or falseならbの値という評価となっている
+      # そのため、上記だとaからBoolean型の値(false)を取得できない
       @key = args[:key] || 'key is not found'
       @value = args[:value] || 'value is not found'
       @option = args[:option] || self.class
