@@ -2,8 +2,8 @@
 
 source 'https://rubygems.org'
 
-gem 'rails'
 gem 'nokogiri'
-gem 'solargraph'
 gem 'pry-byebug'
+gem 'rails'
 gem 'rubocop'
+gem 'solargraph'
