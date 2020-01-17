@@ -1,2 +1,3 @@
 # ruby-sandbox
-rubyテスト系
+
+Rubyのお試し用リポジトリ
