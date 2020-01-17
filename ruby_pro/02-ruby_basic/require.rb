@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rubyを実行するパスが起点となる
 # require './ruby-pro/02/require_relative_test/hello'
 

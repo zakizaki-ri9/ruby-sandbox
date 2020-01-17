@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def bye
-  puts 'bye'  
+  puts 'bye'
 end
