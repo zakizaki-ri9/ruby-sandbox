@@ -16,3 +16,6 @@ require | されない | ruby実行時のパス
 load | される | ruby実行時のパス
 require_relative | されない | rbファイル
 
+## [03-minitest](./03-minitest)
+
+- `test_`から始まるメソッドを検知して実行している
