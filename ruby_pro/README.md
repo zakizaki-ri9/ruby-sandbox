@@ -44,3 +44,5 @@ require_relative | されない | rbファイル
 - `downto` ... ブロック引数の数値を指定された数値までn **-1** する
 - `step` ... n〜mまでxずつ数値を増減を繰り返す
 - `loop` ... `while true; end`と同じ（無限ループ）
+
+## [06_expression](./06_expression)
