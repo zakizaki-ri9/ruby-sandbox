@@ -1,6 +1,6 @@
 # メモ
 
-## [02-ruby_basic](./02-ruby_basic)
+## [02_ruby_basic](./02_ruby_basic)
 
 ### !で終わるメソッド
 
@@ -16,7 +16,7 @@ require | されない | ruby実行時のパス
 load | される | ruby実行時のパス
 require_relative | されない | rbファイル
 
-## [03-minitest](./03-minitest)
+## [03_minitest](./03_minitest)
 
 - `test_`から始まるメソッドを検知して実行している
 
@@ -48,3 +48,11 @@ require_relative | されない | rbファイル
 ## [06_expression](./06_expression)
 
 - Rubyの正規表現サイト - [Rubular](https://rubular.com)
+
+## [07_class](./07_class)
+
+- モンキーパッチ
+  - クラス、メソッドを再定義することでメソッドのオーバーライドが可能
+  - ただ、モンキーパッチしたことを何かしらわかるようにしておかないと以下のような弊害が発生しやすいので注意
+    - 元クラスが更新された際、弊害が発生しやすい
+    - 引き継ぎ漏れ等が発生すると、落とし穴になりがち
