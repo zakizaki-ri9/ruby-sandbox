@@ -61,3 +61,14 @@ require_relative | されない | rbファイル
 ## [10_proc](./10_proc)
 
 - `proc`と`Proc.new`は同意味
+
+## 12_その他
+
+- `eval(string)`で引数をRubyコードとして実行する
+
+### 組み込み変数
+
+名前 | 説明
+-- | --
+ENV | 環境変数
+ARGV | 起動時引数
