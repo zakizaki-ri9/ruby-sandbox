@@ -24,7 +24,18 @@ class User
     self.class.name + 'Ex'
   end
   # rubocop:enable Lint/DuplicateMethods
+
+  private
+
+  def p_hello
+    'private hello'
+  end
 end
 
 u = User.new
 p "User: #{u.hello}, #{u.greeting}, hello_original: #{u.hello_original}"
+
+# メソッド確認
+# 第2引数はpublic以外のメソッドを含めるかどうか
+p "respond_to p_hello: #{u.respond_to?(:p_hello)}"
+p "respond_to p_hello: #{u.respond_to?(:p_hello, true)}"
