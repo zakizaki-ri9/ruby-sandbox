@@ -8,7 +8,7 @@ File.open('./file_search/test.txt') do |f|
   f.each_line do |line|
     str = line.scan(%r{^time:\d{4}\/\d{2}\/\d{2}\s\d{2}:\d{2}:\d{2}|Keyword.*$})
     idx = result.find_index { |r| r[:key] == str[1] }
-    if idx >= 0
+    if !idx.nil?
       result[idx][:count] += 1
     else
       result.push(key: str[1], count: 1)
