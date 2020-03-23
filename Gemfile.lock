@@ -88,7 +88,7 @@ GEM
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.1)
-    parser (2.7.0.2)
+    parser (2.7.0.5)
       ast (~> 2.4.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -137,7 +137,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
-    solargraph (0.38.2)
+    solargraph (0.38.6)
       backport (~> 1.1)
       benchmark
       bundler (>= 1.17.2)
