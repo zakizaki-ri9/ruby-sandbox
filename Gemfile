@@ -2,8 +2,12 @@
 
 source 'https://rubygems.org'
 
+gem 'httpclient'
 gem 'nokogiri'
-gem 'pry-byebug'
 gem 'rails'
-gem 'rubocop'
-gem 'solargraph'
+
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'rubocop'
+  gem 'solargraph'
+end
