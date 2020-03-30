@@ -9,8 +9,6 @@ require 'yaml'
 yaml_file_path = ARGV[0].presence || './tresure_data_postback/setting.yml'
 yaml = YAML.load_file(yaml_file_path)
 
-# puts yaml
-
 def postback_api_url(database:, table:)
   "https://in.treasuredata.com/postback/v3/event/#{database}/#{table}"
 end
