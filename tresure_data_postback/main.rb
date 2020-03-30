@@ -17,10 +17,11 @@ end
 
 # PostbackAPIを叩く
 client = HTTPClient.new
-body = { test: 'test' }
+client.debug_dev = $stderr
+body = { test: 'test' }.to_json
 header = {
   'X-TD-Write-Key': yaml['tresure_data']['write_key'],
-  'Content-Type': 'application/json;'
+  'Content-Type': 'application/json'
 }
 api =
   postback_api_url(
@@ -28,18 +29,9 @@ api =
     table: yaml['tresure_data']['table']
   )
 
-res = client.post(
-  postback_api_url(
-    database: yaml['tresure_data']['database'],
-    table: yaml['tresure_data']['table']
-  ),
-  {
-    body: body,
-    header: header
-  }
-)
+# 通信
+res = client.send(:post, api, body, header)
 
 # 結果
-puts "api: #{api}"
 puts "status: #{res.status}"
 puts "body: #{res.body}"
