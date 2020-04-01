@@ -32,4 +32,4 @@ res = client.send(:post, api, body, header)
 
 # 結果
 puts "status: #{res.status}"
-puts "body: #{res.body}"
+puts "body: #{JSON.parse(res.body)}"
