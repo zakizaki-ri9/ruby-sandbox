@@ -11,3 +11,6 @@
 
 Style/AsciiComments:
   Enabled: false
+
+Layout/LineLength:
+  Max: 100
