@@ -1,0 +1,16 @@
+GEM
+  specs:
+
+GEM
+  remote: https://rubygems.pkg.github.com/zakizaki-ri9/
+  specs:
+    ruby-sandbox-hello (0.0.1)
+
+PLATFORMS
+  arm64-darwin-20
+
+DEPENDENCIES
+  ruby-sandbox-hello!
+
+BUNDLED WITH
+   2.2.22
