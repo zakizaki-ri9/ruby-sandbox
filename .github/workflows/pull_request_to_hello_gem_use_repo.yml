@@ -18,6 +18,6 @@ jobs:
           working-directory: ruby-sandbox/github-package-gem-use
       - name: bundle update
         run: |
+          cd ruby-sandbox/github-package-gem-use
           bundle update ruby-sandbox-hello
           git status
-
