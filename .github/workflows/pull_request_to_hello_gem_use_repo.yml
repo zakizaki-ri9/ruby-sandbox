@@ -1,0 +1,23 @@
+name: Pull Request to Hello Gem use Repo
+on: workflow_dispatch
+
+jobs:
+  main:
+    name: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: git clone
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # see. https://qiita.com/broken55/items/fd2f65474243560b71eb
+          git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/zakizaki-ri9/ruby-sandbox
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+          working-directory: ruby-sandbox/github-package-gem-use
+      - name: bundle update
+        run: |
+          bundle update ruby-sandbox-hello
+          git status
+
