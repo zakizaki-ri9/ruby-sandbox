@@ -21,4 +21,13 @@ jobs:
           cd ruby-sandbox/github-package-gem-use
           bundle config https://rubygems.pkg.github.com/zakizaki-ri9 ${GITHUB_ACTOR}:${GITHUB_TOKEN}
           bundle update ruby-sandbox-hello
-          git status
+          if [ $(git diff Gemfile.lock | wc -l) = 0 ] then
+            echo "latest version"
+            exit 0
+          fi
+      - name: git commit & push
+        run: |
+          git switch -c wip/update_version
+          git add Gemfile.lock
+          git commit -m "update version"
+          git push
